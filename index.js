@@ -26,6 +26,14 @@ const supabase = createClient(
   process.env.SUPABASE_KEY
 );
 
+app.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy", 
+    "default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com"
+  )
+  next()
+})
+
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({ credentials: true, origin: 'http://localhost:5173' }))
