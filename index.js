@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const { createClient } = require('@supabase/supabase-js');
 const app = express();
+const router = express.Router();
 const port = process.env.PORT || 3001;
 const adminRoutes = require('./routes/adminRoutes');
 const alunoRoutes = require('./routes/alunoRoutes');
@@ -41,6 +42,9 @@ app.use('/api/registroacademico', regsitroAcademicoRoutes)
 app.use('/api/financeiro', transacaoFinanceiraRoutes);
 app.use('/api/pagamentos', pagamentoRoutes);
 app.use('/api/contas', contaRoutes);
+router.get('/', (req, res) => {
+  res.send('Helo World, estamos funcionando')
+})
 
 db
 // .sync({ force: true, alter: true })
