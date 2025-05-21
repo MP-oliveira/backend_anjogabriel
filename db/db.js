@@ -1,4 +1,6 @@
 const { Sequelize } = require('sequelize');
+require('pg'); // Explicitly require pg
+
 const db = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
   host: 'localhost',
