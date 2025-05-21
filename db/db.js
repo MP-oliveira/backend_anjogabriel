@@ -3,7 +3,12 @@ require('pg'); // Explicitly require pg
 
 const db = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
-  host: 'localhost',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false // Necessário para alguns provedores
+    }
+  }
 })
 
 console.log('Conectando ao banco:', process.env.DATABASE_URL);
