@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ credentials: true, origin: 'http://localhost:5173' }))
+app.use(cors({ credentials: true, origin: 'http://localhost:3001' }))
 app.use('/api/admins', adminRoutes);
 app.use('/api/alunos', alunoRoutes);
 app.use('/api/cursos', cursoRoutes);
