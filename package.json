@@ -13,8 +13,12 @@
     "vercel-build": "npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "academico",
+    "api",
+    "nodejs"
+  ],
+  "author": "Mauricio Oliveira e Mario Sérgio",
   "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.45.6",
@@ -36,5 +40,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
-  }
+  },
+  "files": [
+    "controllers",
+    "models",
+    "routes",
+    "middlewares",
+    "db",
+    "index.js",
+    "vercel.json"
+  ]
 }

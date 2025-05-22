@@ -1,5 +1,5 @@
 const Pagamento = require('../models/Pagamento');
-const Aluno = require('../models/Aluno');
+const Aluno = require('../models/aluno');
 const { ContaBancaria } = require('../models/transicaoFinanceira');
 const { TransacaoFinanceira } = require('../models/transicaoFinanceira');
 const { Op } = require('sequelize');
